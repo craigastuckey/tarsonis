@@ -30,4 +30,4 @@ jobs:
       # should save this keys in github, settings of the project, secrets :
       # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
       - name: aws deploy
-        run: BUILD_DIRECTORY=build BUCKET_NAME=arn:aws:s3:::tarsonis AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} npm run deploy-aws
+        run: BUILD_DIRECTORY=build BUCKET_NAME=tarsonis AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} npm run deploy-aws
