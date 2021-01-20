@@ -1,18 +1,11 @@
 name:  CI/CD
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the master branch
+  # Trigger the workflow on push or pull request
   push:
-    branches:
-      -  master
-
+    branches: [ main ]
   pull_request:
-    branches:
-      - master
-
-  # Allows manual running of this workflow in the Actions tab
-  worfklow_dispatch:
+    branches: [ main ]
 
 jobs:
   primary:
