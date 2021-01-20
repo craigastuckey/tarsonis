@@ -11,6 +11,9 @@ on:
     branches:
       - master
 
+  # Allows manual running of this workflow in the Actions tab
+  worfklow_dispatch:
+
 jobs:
   primary:
     runs-on: ubuntu-latest
