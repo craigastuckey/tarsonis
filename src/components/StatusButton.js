@@ -10,8 +10,15 @@ class StatusButton extends React.Component {
     }
     
     handleClick() {
-        fetch('https://rfgxy4efvc.execute-api.us-east-1.amazonaws.com/test/minecraft/start')
-        .then(res => res.json())
+        const requestOptions = {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'text/plain'
+            }
+        }
+        fetch('https://rfgxy4efvc.execute-api.us-east-1.amazonaws.com/test/minecraft/start', requestOptions)
+        .then(res => res.text())
         .then((data) => {
             this.setState({ results: data })
         })
